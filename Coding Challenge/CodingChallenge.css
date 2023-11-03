@@ -1,0 +1,105 @@
+/* Ho scritto questo foglio css seguendo il html dall'alto al basso*/
+*{
+  /* resetto tutte le misure dei contenitori e imposto un unico font per la pagina */
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+/* .center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}           Avevo creato questa classe per usarla sul layover(dato mi da un problema con il margine superiore) per centrarlo ma non era la soluzione esatta al problema*/
+.background{
+  height: 100vh;
+  background-image: url(MaterialeEsercizioLim/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 2em;       /* imposto un padding qua perchè non mi fa impostare il margine superiore del layover rispetto al div.background, ma crea un margine rispetto all'html*/
+}
+.layover{
+  margin: 0em 18em 5em;       /* qua ho deciso di usare il margine da solo e non impostare le misure in modo si adatti alla pagina ( avrei voluto impostare un min-width con un sellettore Media Query ma non mi sento ancora pronto a usarlo e non ne ho avuto il tempo )*/
+  padding: 5em;
+  background-color: rgba(0, 0, 0, .6);
+}
+/* SECTION HEAD */
+.logo{
+  margin: 1em auto 2em;
+  text-align: center;
+}
+img {
+  height: 7em;
+}
+h1{
+  color: lime;
+  font-size: 2.3em;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+/* SECTION NAV */
+.btn-container{
+  height: 3em;
+  background-color: lime;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  margin-bottom: 1.5em;
+}             /* ho usato un layout flex preferndolo a uno usando posizionamenti relativi*/
+.btn-container button{
+  border: none;
+  
+}
+.btn-container button:hover{
+  background-color: rgba(0, 0, 0, .7);
+  color: white;
+}
+/* SECTION SCOOTER LIST */
+ul{
+  list-style: none;
+  padding: 0;
+}
+li input{
+  margin: .4em;
+}
+
+h2{
+  display: inline-block;
+  color: white;
+  font-size: 1.5em;
+}
+li h2+p{
+  color: white;
+  font-size: 1.2em;
+}
+li h2+p::before{
+  content:'↦ ';
+}
+li p+p{
+  color: white;
+  font-weight: 200;
+}
+.charge-bar{
+  height: 1.7em;
+  border-radius: .3em;
+}             /* per concludere subito il lavoro ho creato una classe unica per la dimensione di tutte le barre e poi dare ciascuna i propri dettagli */
+.low-battery{
+  background-color: #be4141;
+  width: 19%;
+}
+.mid-battery{
+  background-color: #f5b453;
+  width: 40%;
+}
+.high-battery{
+  background-color: #1ec31e;
+  width: 70%;
+}
+
+
+/* Grazie per la vostra attenzione e il vostro tempo, e maagri arrividerci dentro la nuova classe di boolean!!*/
